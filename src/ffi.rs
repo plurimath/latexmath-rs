@@ -40,6 +40,9 @@ fn response(input: &str, decimal: &str) -> Value {
         },
         Err(e) => {
             let (category, offset) = match &e {
+                crate::typed::ModelError::Parse(crate::Error::UnsupportedDecimal(_)) => {
+                    ("invalid_argument", None)
+                }
                 crate::typed::ModelError::Parse(error) => ("parse_error", error.byte_offset()),
                 _ => ("model_error", None),
             };
