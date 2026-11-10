@@ -1,0 +1,482 @@
+[
+  {
+    "payload": "raw-accents.yaml",
+    "id": "latex-accent-hat.raw",
+    "input": {
+      "str": "\\hat{a}"
+    },
+    "options": {
+      "decimal": "."
+    },
+    "expected": {
+      "preprocessed": {
+        "str": "\\hat{a}"
+      },
+      "tree": {
+        "hash": [
+          [
+            {
+              "sym": "unary_functions"
+            },
+            {
+              "hash": [
+                [
+                  {
+                    "sym": "unary"
+                  },
+                  {
+                    "slice": "hat",
+                    "byte_offset": 1,
+                    "char_offset": 1
+                  }
+                ],
+                [
+                  {
+                    "sym": "first_value"
+                  },
+                  {
+                    "hash": [
+                      [
+                        {
+                          "sym": "expression"
+                        },
+                        {
+                          "hash": [
+                            [
+                              {
+                                "sym": "symbols"
+                              },
+                              {
+                                "slice": "a",
+                                "byte_offset": 5,
+                                "char_offset": 5
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "payload": "raw-left-right.yaml",
+    "id": "latex-left-right-round-sum.raw",
+    "input": {
+      "str": "\\left( a + b \\right)"
+    },
+    "options": {
+      "decimal": "."
+    },
+    "expected": {
+      "preprocessed": {
+        "str": "\\left(a+b\\right)"
+      },
+      "tree": {
+        "hash": [
+          [
+            {
+              "sym": "left_right"
+            },
+            {
+              "hash": [
+                [
+                  {
+                    "sym": "left"
+                  },
+                  {
+                    "slice": "\\left",
+                    "byte_offset": 0,
+                    "char_offset": 0
+                  }
+                ],
+                [
+                  {
+                    "sym": "left_paren"
+                  },
+                  {
+                    "slice": "(",
+                    "byte_offset": 5,
+                    "char_offset": 5
+                  }
+                ],
+                [
+                  {
+                    "sym": "expression"
+                  },
+                  {
+                    "hash": [
+                      [
+                        {
+                          "sym": "sequence"
+                        },
+                        {
+                          "hash": [
+                            [
+                              {
+                                "sym": "symbols"
+                              },
+                              {
+                                "slice": "a",
+                                "byte_offset": 6,
+                                "char_offset": 6
+                              }
+                            ]
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "sym": "expression"
+                        },
+                        {
+                          "hash": [
+                            [
+                              {
+                                "sym": "sequence"
+                              },
+                              {
+                                "hash": [
+                                  [
+                                    {
+                                      "sym": "operant"
+                                    },
+                                    {
+                                      "slice": "+",
+                                      "byte_offset": 7,
+                                      "char_offset": 7
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "sym": "expression"
+                              },
+                              {
+                                "hash": [
+                                  [
+                                    {
+                                      "sym": "symbols"
+                                    },
+                                    {
+                                      "slice": "b",
+                                      "byte_offset": 8,
+                                      "char_offset": 8
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "sym": "right"
+                  },
+                  {
+                    "slice": "\\right",
+                    "byte_offset": 9,
+                    "char_offset": 9
+                  }
+                ],
+                [
+                  {
+                    "sym": "right_paren"
+                  },
+                  {
+                    "slice": ")",
+                    "byte_offset": 15,
+                    "char_offset": 15
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "payload": "raw-over-under.yaml",
+    "id": "latex-over-under-underbrace-sum.raw",
+    "input": {
+      "str": "\\underbrace{a+b}"
+    },
+    "options": {
+      "decimal": "."
+    },
+    "expected": {
+      "preprocessed": {
+        "str": "\\underbrace{a+b}"
+      },
+      "tree": {
+        "hash": [
+          [
+            {
+              "sym": "unary_functions"
+            },
+            {
+              "hash": [
+                [
+                  {
+                    "sym": "unary"
+                  },
+                  {
+                    "slice": "underbrace",
+                    "byte_offset": 1,
+                    "char_offset": 1
+                  }
+                ],
+                [
+                  {
+                    "sym": "first_value"
+                  },
+                  {
+                    "hash": [
+                      [
+                        {
+                          "sym": "expression"
+                        },
+                        {
+                          "hash": [
+                            [
+                              {
+                                "sym": "sequence"
+                              },
+                              {
+                                "hash": [
+                                  [
+                                    {
+                                      "sym": "symbols"
+                                    },
+                                    {
+                                      "slice": "a",
+                                      "byte_offset": 12,
+                                      "char_offset": 12
+                                    }
+                                  ]
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "sym": "expression"
+                              },
+                              {
+                                "hash": [
+                                  [
+                                    {
+                                      "sym": "sequence"
+                                    },
+                                    {
+                                      "hash": [
+                                        [
+                                          {
+                                            "sym": "operant"
+                                          },
+                                          {
+                                            "slice": "+",
+                                            "byte_offset": 13,
+                                            "char_offset": 13
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "sym": "expression"
+                                    },
+                                    {
+                                      "hash": [
+                                        [
+                                          {
+                                            "sym": "symbols"
+                                          },
+                                          {
+                                            "slice": "b",
+                                            "byte_offset": 14,
+                                            "char_offset": 14
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "payload": "raw-whitespace.yaml",
+    "id": "latex-whitespace-qquad.raw",
+    "input": {
+      "str": "a \\qquad b"
+    },
+    "options": {
+      "decimal": "."
+    },
+    "expected": {
+      "preprocessed": {
+        "str": "a\\qquadb"
+      },
+      "tree": {
+        "hash": [
+          [
+            {
+              "sym": "sequence"
+            },
+            {
+              "hash": [
+                [
+                  {
+                    "sym": "symbols"
+                  },
+                  {
+                    "slice": "a",
+                    "byte_offset": 0,
+                    "char_offset": 0
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "sym": "expression"
+            },
+            {
+              "hash": [
+                [
+                  {
+                    "sym": "sequence"
+                  },
+                  {
+                    "hash": [
+                      [
+                        {
+                          "sym": "symbols"
+                        },
+                        {
+                          "slice": "qquad",
+                          "byte_offset": 2,
+                          "char_offset": 2
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "sym": "expression"
+                  },
+                  {
+                    "hash": [
+                      [
+                        {
+                          "sym": "symbols"
+                        },
+                        {
+                          "slice": "b",
+                          "byte_offset": 7,
+                          "char_offset": 7
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "payload": "raw-rejections.yaml",
+    "id": "latex-unclosed-brace.raw",
+    "input": {
+      "str": "\\frac{1"
+    },
+    "options": {
+      "decimal": "."
+    },
+    "expected": {
+      "refusal": {
+        "category": "parse_error",
+        "byte_offset": 7
+      }
+    }
+  },
+  {
+    "payload": "raw-rejections.yaml",
+    "id": "latex-frac-one-arg.raw",
+    "input": {
+      "str": "\\frac{1}"
+    },
+    "options": {
+      "decimal": "."
+    },
+    "expected": {
+      "refusal": {
+        "category": "parse_error",
+        "byte_offset": 8
+      }
+    }
+  },
+  {
+    "payload": "raw-rejections.yaml",
+    "id": "latex-whitespace-only.raw",
+    "input": {
+      "str": "   "
+    },
+    "options": {
+      "decimal": "."
+    },
+    "expected": {
+      "refusal": {
+        "category": "parse_error",
+        "byte_offset": 3
+      }
+    }
+  },
+  {
+    "payload": "raw-rejections.yaml",
+    "id": "latex-tilde.raw",
+    "input": {
+      "str": "a~b"
+    },
+    "options": {
+      "decimal": "."
+    },
+    "expected": {
+      "refusal": {
+        "category": "parse_error",
+        "byte_offset": 1
+      }
+    }
+  }
+]

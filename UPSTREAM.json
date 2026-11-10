@@ -1,0 +1,45 @@
+{
+  "stage": {
+    "commit": "ce2ebdd4ab34e79d92a7edbbcea22ef2c598da23",
+    "artifacts": {
+      "artifacts/latex.json": "2e8e17ce8490211ea6d78c6bb55ff7125a47b3537211b72c1bb7677432c7e5b3",
+      "artifacts/latex.bindings.rs.json": "7b034b2e1c25b68fde1b4c13899e29429b31411bc969268fce1d85beb2e7033d",
+      "grammars/latex.wrappers.json": "896f022c882d7934d9830bec6a7cd29bace0c6153160432a478a889fd653b989"
+    }
+  },
+  "transforms": {
+    "repository": "plurimath/plurimath-testsuite",
+    "commit": "0d50db714d75e3883a507fbc47022eb547fb027f",
+    "files": {
+      "languages.rs": "1f0b0f6a987cc2112d9074fa9a2516f9f18c21ba68885c68c0f2c3b83112af40",
+      "replay.rs": "158978bc23644a5c6028d667ac47bdcd693a6899151504fa2f01ce81c3026287"
+    }
+  },
+  "runtime": {
+    "crate": "parsanol",
+    "version": "0.20.7",
+    "cache_source_commit": "18c8a083dc58ce5f875b5649d5af98b94d84a0a2"
+  },
+  "stage_transforms": {
+    "source": "stage Ruby raw_tree.rb / parser/unwrap.rb",
+    "policy": "shared Rust unwrap reused with current wrapper table before stage renesting"
+  },
+  "preprocessing": {
+    "source_sha256": "944b53ef8c86c0ebbf91602fe36d69675091f8821dbaf1ed540ac45322895388",
+    "entities": "Python stdlib HTML4 name2codepoint plus apos; exact generated table pinned",
+    "entities_sha256": "1082c70885a2484f29114ea3d524533da45da8c8f27bf641feb0b038b32bc112",
+    "full_entity_parity": "unverified"
+  },
+  "model_producer": {
+    "repository": "https://github.com/plurimath/latexmath",
+    "commit": "d50f06b1a741a166867f264de522351448e2c6de",
+    "framework_commit": "fd2989fd8478b1ecb2508d98fa2d66792c09c72b",
+    "bundle_sha256": "ce0e976f771a9071537da6b2f16bba75911dab8d4538aa4545e0265984af1386",
+    "exporter": "scripts/export_portable_models.rb",
+    "models": 33
+  },
+  "model_generator": {
+    "repository": "lutaml/lutaml-rs",
+    "commit": "945e6ada11f52f77b959a5df1f05fdbd23092939"
+  }
+}
