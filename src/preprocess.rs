@@ -24,7 +24,7 @@ fn groups(text: &str) -> Vec<(usize, usize)> {
     }
     ranges
 }
-fn decode(input: &str) -> String {
+pub(super) fn decode(input: &str) -> String {
     let entities: HashMap<String, String> =
         serde_json::from_str(include_str!("../artifacts/html4-entities.json"))
             .expect("embedded HTML4 entities");

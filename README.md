@@ -11,7 +11,7 @@ println!("{}", parsed.canonical());
 ```
 
 `parse_with_decimal(input, decimal)` accepts `.`, `,`, and `٫`. The native
-Parsanol engine is pinned to 0.20.7. Unicode preprocessing and stage transforms
+Parsanol engine uses the immutable source candidate recorded in `UPSTREAM.json`. Unicode preprocessing and stage transforms
 are reused from the pinned shared testsuite, with attribution in UPSTREAM.json.
 Errors preserve the native error and expose UTF-8 byte offsets relative to the
 preprocessed grammar input. Parsed slices reference `parsed_input`; caller offsets
@@ -36,3 +36,11 @@ input; caller-coordinate remapping is not inferred.
 The declared writer omits empty/nil members. Model identity and wire idempotence
 across JSON read/write are not guaranteed; cross-runtime model equivalence remains
 a separate verification boundary.
+
+`Parser::parse_legacy(input)` and `parse_legacy_with_decimal(input, decimal)`
+expose the legacy stage policy. Existing `parse`, `parse_with_decimal` and model
+JSON APIs preserve strict native behavior. Legacy LaTeX errors refer to caller input; `grammar_byte_offset()` retains the
+preprocessed position. Slices reference `Parsed::parsed_input`.
+LaTeX keeps the frozen producer's strict native/farthest-failure policy.
+Annotated legacy preprocessing carries origin spans through entity, space and
+text/mbox rewrites. Strict native/model APIs retain their existing preprocessing.

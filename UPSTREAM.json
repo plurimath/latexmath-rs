@@ -41,5 +41,24 @@
   "model_generator": {
     "repository": "lutaml/lutaml-rs",
     "commit": "945e6ada11f52f77b959a5df1f05fdbd23092939"
+  },
+  "compatibility_runtime": {
+    "repository": "https://github.com/parsanol/parsanol-rs",
+    "commit": "4b8351aae8e403e73aaa306111250ebd56c12e0f",
+    "version": "0.20.12",
+    "release_status": "unreleased source candidate",
+    "strict_api": "parse/parse_with_decimal and model JSON unchanged",
+    "legacy_api": "parse_legacy/parse_legacy_with_decimal",
+    "policy": "strict/farthest with annotated legacy preprocessing and caller offsets; separate grammar_byte_offset; strict/model APIs unchanged"
+  },
+  "legacy_source_map": {
+    "repository": "https://github.com/plurimath/latexmath-ts",
+    "commit": "7411917de8fd2ed8ef01809122ecea7d84f192b1",
+    "source_files": {
+      "src/preprocess.ts": "70a54f4c487e38cb6639f567ea9220fbbaa79d0286d3e4f69e84c3615ed9b8f8",
+      "src/source-map.ts": "fe10698b8ef6fef4a3b265c6b79cfac8032c25ff8f09549c6f7e77ca9485516c"
+    },
+    "units": "Unicode scalars internally, native/preprocessed and caller UTF-8 byte offsets exposed separately",
+    "scope": "legacy API only; existing strict/model preprocessor unchanged"
   }
 }
