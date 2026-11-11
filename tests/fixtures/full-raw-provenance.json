@@ -1,0 +1,107 @@
+{
+  "language": "latex",
+  "generation": 3,
+  "source_corpus_commit": "0d50db714d75e3883a507fbc47022eb547fb027f",
+  "provenance_sha256": "93d9498a908f7b4f7f4d23abe3d7c74b36afba3e33e854278331bf07b9caeffb",
+  "snapshot_digest": "sha256:782cb6ee7c75ec1e38ed343301c2220ad14c283b96e5cf9eac2a4ff39b1aeceb",
+  "payloads": [
+    {
+      "path": "payloads/raw-accents.yaml",
+      "sha256": "ccd5eb8ac834588dce15f933f07c2c6f4a7dbe761fa5453c6d1186bdc00cb2f3",
+      "bytes": 8250
+    },
+    {
+      "path": "payloads/raw-colour.yaml",
+      "sha256": "4c554eebd8bca7dbc5a3da49bb6ebc68466bed4a5ab47aff19b9fe4deb64f6e6",
+      "bytes": 3342
+    },
+    {
+      "path": "payloads/raw-fences.yaml",
+      "sha256": "ea534949d03583f2c220866d485f6219cd91cd3ac582ea9dd603e49c849c001d",
+      "bytes": 4156
+    },
+    {
+      "path": "payloads/raw-fonts.yaml",
+      "sha256": "c26f47ce2f466031a199844ac17f3860b1245a93c14ec7d11991e912d7a4bcb4",
+      "bytes": 6659
+    },
+    {
+      "path": "payloads/raw-frac.yaml",
+      "sha256": "8f88c29fec2500d51fe4d434d772bae0b9115a4cc56e18f3e48e45cfdaa023e6",
+      "bytes": 9154
+    },
+    {
+      "path": "payloads/raw-left-right.yaml",
+      "sha256": "aa85d72686663eb1b63642a0b5754f3b6e23a1de92ca9416ce5dc9a3bd03fff8",
+      "bytes": 6899
+    },
+    {
+      "path": "payloads/raw-matrices.yaml",
+      "sha256": "89735b432ffbfec9c257efd61449fc951276ae6f779aa843599573883285d3aa",
+      "bytes": 9149
+    },
+    {
+      "path": "payloads/raw-mod.yaml",
+      "sha256": "b975b9ce448413206c9719655ed7c6ce59d5314f03d293bc305e1d41537ad2bb",
+      "bytes": 5114
+    },
+    {
+      "path": "payloads/raw-nary.yaml",
+      "sha256": "4b18ff012741fb799aa81e1b761d9c75224dcfa4488e009002075cef85d1e53a",
+      "bytes": 17637
+    },
+    {
+      "path": "payloads/raw-numbers.yaml",
+      "sha256": "0f1ffdf8f24df26e16cb16a04f0afa2d77caeb0f7a2b5cf72f38a420c88119ea",
+      "bytes": 2719
+    },
+    {
+      "path": "payloads/raw-operators.yaml",
+      "sha256": "1801897a92cee82ca64e93d67a1e60b2f06d59457aa13772a9f79d9e8138e645",
+      "bytes": 3922
+    },
+    {
+      "path": "payloads/raw-over-under.yaml",
+      "sha256": "103fd1735d829b390ceca39a6d5811ef7f1ea9121409d20a982b707414f2c1d0",
+      "bytes": 10917
+    },
+    {
+      "path": "payloads/raw-powers.yaml",
+      "sha256": "bda35bb75dbbab18c6a6cf2a2aedaddccf897042ad3d3a4931a06f3f56c97d6f",
+      "bytes": 5752
+    },
+    {
+      "path": "payloads/raw-quoted-text.yaml",
+      "sha256": "7bf319d32c13f6bd8bbc34412412e6e10341d637c5b8a674ce14e687a6b36fe2",
+      "bytes": 1907
+    },
+    {
+      "path": "payloads/raw-rejections.yaml",
+      "sha256": "61bedcd8d0d66d29403e2f27bcfd12177114390d5d77f7151a1d7857aa746828",
+      "bytes": 2741
+    },
+    {
+      "path": "payloads/raw-roots.yaml",
+      "sha256": "064ae420d3f80cc184feb2b4f48a0f25223ef94ab5dbe7146bd8dd959b71dd0a",
+      "bytes": 7742
+    },
+    {
+      "path": "payloads/raw-symbols.yaml",
+      "sha256": "570a70e44363618440b08827ea5fea2ba3dffa3da57d97ca3dc68a2c80b52051",
+      "bytes": 1476
+    },
+    {
+      "path": "payloads/raw-unary-functions.yaml",
+      "sha256": "c7a823f4fb7a30322972bb3f2408d96be5c31ed2b0ae4f187071ada270fb4810",
+      "bytes": 7679
+    },
+    {
+      "path": "payloads/raw-whitespace.yaml",
+      "sha256": "9cd513a99d4f55ec7b9a61861aca05b949b1a2334c3518c0cb55e82f0ba004a4",
+      "bytes": 5244
+    }
+  ],
+  "fixture_sha256": "4cf11a30ce3a6e0e8cc677c697ac637e785930b9c9824efeb674830d24f0f946",
+  "row_count": 139,
+  "source_gates": "payload byte sizes/SHA256 and frozen provenance SHA verified by extract-vectors.mjs; cases copied without expected-value changes"
+}
