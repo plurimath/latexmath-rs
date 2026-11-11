@@ -77,7 +77,9 @@ pub fn call(input: &str) -> String {
         prev = Some(c);
     }
     let cleaned = cleaned
-        .replace("\\\\ ", "\\\\\\\\")
+        // Ruby gsub("\\\\ ", "\\\\\\\\"): backslashes in a gsub replacement are escapes, so the
+        // producer writes ONE escaped backslash pair ("\\\\"), not two (latexmath preprocessor.rb:70).
+        .replace("\\\\ ", "\\\\")
         .replace("&#x26;", "&")
         .replace("&#x22;", "\"");
     let mut text = String::new();
@@ -102,4 +104,16 @@ pub fn call(input: &str) -> String {
     }
     out.push_str(&text[pos..]);
     out
+}
+
+#[cfg(test)]
+mod tests {
+    use super::call;
+    #[test]
+    fn row_break_follows_ruby_gsub_replacement_semantics() {
+        // Producer (latexmath 372e377 Preprocessor) output for the frozen stage rows.
+        assert_eq!(call("\\begin{pmatrix} a \\\\ b \\end{pmatrix}"), "\\begin{pmatrix}a\\\\b\\end{pmatrix}");
+        assert_eq!(call("a \\\\ b"), "a\\\\b");
+        assert_eq!(call("\\\\ "), "\\\\");
+    }
 }
