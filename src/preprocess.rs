@@ -112,7 +112,10 @@ mod tests {
     #[test]
     fn row_break_follows_ruby_gsub_replacement_semantics() {
         // Producer (latexmath 372e377 Preprocessor) output for the frozen stage rows.
-        assert_eq!(call("\\begin{pmatrix} a \\\\ b \\end{pmatrix}"), "\\begin{pmatrix}a\\\\b\\end{pmatrix}");
+        assert_eq!(
+            call("\\begin{pmatrix} a \\\\ b \\end{pmatrix}"),
+            "\\begin{pmatrix}a\\\\b\\end{pmatrix}"
+        );
         assert_eq!(call("a \\\\ b"), "a\\\\b");
         assert_eq!(call("\\\\ "), "\\\\");
     }
