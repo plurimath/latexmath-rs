@@ -37,3 +37,7 @@ crate-type = ["rlib", "cdylib"]
 opt-level = 3
 lto = true
 codegen-units = 1
+
+[dev-dependencies]
+# The corpus replay test reads raw trees deeper than the default limit of 128.
+serde_json = { version = "=1.0.140", features = ["unbounded_depth"] }
