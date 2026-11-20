@@ -1,0 +1,23 @@
+[
+  {
+    "input": "\\alpha+1",
+    "decimal": "."
+  },
+  {
+    "input": "\\sqrt{x}",
+    "decimal": "."
+  },
+  {
+    "input": "\\frac{a}{b}",
+    "decimal": "."
+  },
+  {
+    "input": "1,5",
+    "decimal": ","
+  },
+  {
+    "input": "",
+    "decimal": ".",
+    "raw_refusal": true
+  }
+]

@@ -44,3 +44,41 @@ preprocessed position. Slices reference `Parsed::parsed_input`.
 LaTeX keeps the frozen producer's strict native/farthest-failure policy.
 Annotated legacy preprocessing carries origin spans through entity, space and
 text/mbox rewrites. Strict native/model APIs retain their existing preprocessing.
+
+## WebAssembly
+
+The optional `wasm` feature exports `StageParser` through wasm-bindgen and
+enables the existing generated model codecs. Native default features are unchanged.
+Build a local Node package (requires wasm-pack 0.13.1 and the WASM Rust target):
+
+```sh
+wasm-pack build --target nodejs --out-dir wasm-node --no-opt -- --locked --features wasm
+```
+
+```js
+const { StageParser } = require('./wasm-node/latexmath.js');
+const parser = new StageParser();
+try {
+  const modelJson = parser.parse("\\alpha+1", '.');
+  const rawJson = parser.parseRaw("\\alpha+1", '.');
+  const serializedJson = parser.serialize(modelJson);
+} finally {
+  parser.free();
+}
+```
+
+`parse` returns portable model JSON using the native strict parser policy.
+`parseRaw` returns JSON with `preprocessed` and a canonical tagged `tree`,
+including the existing byte and character offsets. Pass `'.'` or `','` as
+the decimal option. `serialize` reads and validates portable model JSON and
+writes it through the generated codec; empty members may be omitted, as on
+the native surface. It does not write source notation. Errors throw strings
+containing the native parser or codec diagnostic.
+
+For a browser module, build with `--target web --out-dir wasm-web` and initialize
+the generated module before constructing `StageParser`. The WASM workflow builds
+both packages, executes a Node smoke against three frozen plurimath-testsuite
+raw rows and five native byte references, and uploads `stage-wasm-node-web`.
+It does not publish to npm. The smoke also checks decimal options, empty input,
+invalid models, parse refusals and parser reuse; it is not a full WASM conformance
+or browser-runtime claim.
