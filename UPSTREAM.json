@@ -40,7 +40,7 @@
   },
   "model_generator": {
     "repository": "lutaml/lutaml-rs",
-    "commit": "945e6ada11f52f77b959a5df1f05fdbd23092939"
+    "commit": "1f826b7dd0ba1545479df8a4ba715d67e2985b32"
   },
   "compatibility_runtime": {
     "repository": "https://github.com/parsanol/parsanol-rs",
